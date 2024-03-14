@@ -3,24 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kalkulator BMI</title>
-    
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Kalkulator BMI</h1>
-    </header>
-    <main>
-        <section>
-            
-        </section>
-    </main>
-    <footer>
-        <p>Dibuat dan didesain <a href="https://github.com/AnggiWaSa">Wahyu Anggi Saputro</a>
-    </footer>
+    <h1>Kalkulator BMI</h1>
+    <section>
+        <!-- INPUT -->
+        <div id="input-container">
+            <h2>Masukan</h2>
+            <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.</p>
+            <div class="input-container">
+                <!-- jenis kelamin -->
+                <p>Jenis kelamin</p>
+                <div class="gender">
+                    <label for="male">Laki-laki</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="female">Perempuan</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                </div>
+                <!-- berat badan -->
+                <label for="weight">Berat badan (Kg)</label>
+                <input type="number" id="weight" placeholder="Masukkan berat badan">
+                <!-- umur -->
+                <label for="age">Umur (tahun)</label>
+                <input type="number" id="age" placeholder="Masukan umur">
+                <!-- tinggi badan -->
+                <label for="height">Tinggi badan (cm)</label>
+                <input type="number" id="height" placeholder="Masukkan tinggi badan">
+                <div class="box-btn">
+                    <!-- tombol hitung BMI -->
+                    <button onclick="calculateBMI()" class="btn-success">Hitung BMI</button>
+                    <!-- tombol reset -->
+                    <button onclick="resetForm()" class="btn-error">Reset</button>
+            </div>
+            </div>
+            <div class="text-container">
+                <h3>Keunggulan fitur</h3>
+                <ol>
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>Mempersiapkan program penurunan berat badan</li>
+                </ol>
+                <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh menggunakan kalkulator ini) dan jika Anda tidak yakin dengan hasilnya, harus disemak ulang oleh seorang dokter atau profesional yang memenuhi syarat seperti dokter.</p>
+                <p>Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum, yaitu Indeks Massa Tubuh (BMI).</p>
+            </div>
+        </div>
+        <!-- OUTPUT -->
+        <div id="output-container">
+            <h2>Hasil</h2>
+            <div class="box-output box-center">
+                <div id="output-tag"></div>
+                <div id="output-bmi"></div>
+                <div id="output-category"></div>
+                <div id="output-download">
+                    <button onclick="downloadBMI()" class="btn-success">Download Hasil BMI</button>
+                </div>
+            </div>
+            <div id="output-description"></div>
+            <div id="output-diseases"></div>
+            <div id="download-app">
+                <!-- Tautan ke aplikasi -->
+                <p>Dapatkan Aplikasi melalui</p>
+                <div>
+                    <a href="#"><img src="/assets/download-play-store.svg" alt="Download melalui Play Store"></a>
+                    <a href="#"><img src="/assets/download-app-store.svg" alt="Download melalui App Store"></a>
+                </div>
+            </div>
+        </div>
+    </section>
     
+    <footer>
+        <p>Dibuat dan didesain oleh <a href="https://github.com/AnggiWaSa">Wahyu Anggu Saputro</a>
+    </footer>
     <script src="/js/script.js"></script>
 </body>
 </html>

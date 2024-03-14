@@ -1,3 +1,4 @@
+/* ROOT */
 * {
     margin: 0;
     padding: 0;
@@ -6,4 +7,150 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto; /* Mengatur margin auto untuk mengatur konten ke tengah */
+}
+
+/* componet */
+button {
+    height: 32px;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 8px; /* Menambahkan jarak bawah pada tombol */
+}
+
+.btn-success {
+    background-color: green;
+}
+
+.btn-success:hover {
+    background-color: white;
+    border: 2px solid green;
+    color: green;
+}
+
+.btn-error {
+    background-color: red;
+}
+
+.btn-error:hover {
+    background-color: white;
+    border: 2px solid red;
+    border-color: red;
+}
+
+.box-btn {
+    margin-top: 8px;
+}
+
+/* HEADER */
+h1 {
+    padding-bottom: 32px;
+    text-align: center;
+}
+
+/* MAIN */
+
+/* input */
+section {
+    display: flex;
+    flex-wrap: wrap; /* Mengatur agar item di dalam flex container dapat melingkar ke baris baru */
+    justify-content: center; /* Mengatur agar konten di tengah pada tampilan desktop */
+    margin: 12px;
+}
+
+#input-container, #output-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px; /* Mengatur lebar maksimum container input dan output */
+}
+
+#output-container {
+    margin-top: 64px;
+}
+
+@media only screen and (min-width: 768px) {
+    section {
+        flex-direction: row; /* Mengatur agar kontainer input dan output sejajar pada tampilan desktop */
+        justify-content: space-around; /* Mengatur agar kontainer input dan output sejajar pada tampilan desktop */
+    }
+
+    #input-container, #output-container {
+        width: 45%; /* Mengatur agar kontainer input dan output memiliki lebar yang sama pada tampilan desktop */
+    }
+    
+    #input-container {
+        margin-right: 12px; /* Menambahkan jarak antara input dan output container */
+    }
+}
+
+.input-container, .box-output {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.input-container input {
+    height: 32px;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.gender {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.text-container ol {
+    padding-left: 32px;
+}
+
+/* output */
+.box-center {
+    align-items: center;
+}
+
+#output-tag {
+    font-size: xx-large;
+}
+
+#output-bmi {
+    font-size: 144px;
+}
+
+#output-category {
+    font-size: larger;
+}
+
+#download-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#download-app img {
+    height: 32px;
+}
+
+/* FOOTER */
+footer {
+    height: 32px;
+    text-align: center;
+    font-size: small;
+    padding-top: 48px;
 }
