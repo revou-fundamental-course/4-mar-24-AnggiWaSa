@@ -61,3 +61,17 @@ function downloadBMI() {
     // Fungsi untuk mengunduh hasil BMI
     alert("Mengunduh hasil BMI...");
 }
+
+function toggleDarkMode() {
+    const body = document.body;
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+    // Toggle tema antara gelap dan terang
+    if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        darkModeToggle.textContent = 'Mode Gelap';
+    } else {
+        body.classList.add('dark-mode');
+        darkModeToggle.textContent = 'Mode Terang';
+    }
+}

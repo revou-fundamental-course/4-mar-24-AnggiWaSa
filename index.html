@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Kalkulator BMI</h1>
+    <header>
+        <h1>Kalkulator BMI</h1>
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()">Mode Gelap</button>
+    </header>
     <section>
         <!-- INPUT -->
         <div id="input-container">
-            <h2>Masukan</h2>
+            <h2>Masukan data</h2>
             <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.</p>
             <div class="input-container">
                 <!-- jenis kelamin -->
-                <p>Jenis kelamin</p>
+                <p class="bold">Jenis kelamin</p>
                 <div class="gender">
                     <label for="male">Laki-laki</label>
                     <input type="radio" id="male" name="gender" value="male">
@@ -23,13 +26,13 @@
                     <input type="radio" id="female" name="gender" value="female">
                 </div>
                 <!-- berat badan -->
-                <label for="weight">Berat badan (Kg)</label>
+                <label for="weight" class="bold">Berat badan (Kg)</label>
                 <input type="number" id="weight" placeholder="Masukkan berat badan">
                 <!-- umur -->
-                <label for="age">Umur (tahun)</label>
+                <label for="age" class="bold">Umur (tahun)</label>
                 <input type="number" id="age" placeholder="Masukan umur">
                 <!-- tinggi badan -->
-                <label for="height">Tinggi badan (cm)</label>
+                <label for="height" class="bold">Tinggi badan (cm)</label>
                 <input type="number" id="height" placeholder="Masukkan tinggi badan">
                 <div class="box-btn">
                     <!-- tombol hitung BMI -->
